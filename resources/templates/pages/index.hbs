@@ -1,0 +1,24 @@
+{{#> page}}
+    {{#*inline "main"}}
+        <header id="hero">
+          <div class="site-title site-container">
+            <h1 class="header">Whites Creek Block Party 2022</h1>
+            <h2 class="subheader">Hosted by Friends of Whites Creek</h2>
+          </div>
+        </header>
+        <script>var gallery_data = {
+          IMAGE_PATH: "/assets/img/gallery/",
+          GALLERY_IMAGES: {{{ images }}}
+        };</script>
+          <section id="page" class="site">
+              <div id="content">
+                <div class="gallery"></div>
+                {{#if download_url}}
+                <div class="download">
+                  <a class="button" href="{{download_url}}" target="blank">Download All</a>
+                </div>
+                {{/if}}
+              </div>
+          </section>
+    {{/inline}}
+{{/page}}

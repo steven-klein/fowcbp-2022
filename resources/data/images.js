@@ -1,0 +1,24 @@
+const path = require('path');
+const fs = require ('fs');
+const galleryDir = path.resolve(__dirname, '../assets/img/gallery');
+
+function get() {
+  let images = {};
+    fs.readdirSync(galleryDir).forEach(file => {
+      let image = file.slice(0, -4).split('-')
+      let index = image[4]
+      let size = image[3]
+
+        if ( ! images.hasOwnProperty(index) ) {
+            images[index] = {}
+        }
+
+        images[index][size] = file
+    })
+
+    return Object.values(images);
+}
+
+module.exports = {
+    get: get
+}
