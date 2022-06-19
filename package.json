@@ -2,7 +2,7 @@
     "name": "fowc-block-party-2022",
     "description": "Friends of Whites Creek Block Party Gallery 2022",
     "author": "Steven Klein <steven.p.klein@gmail.com>",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "private": true,
     "scripts": {
         "build": "npm-run-all --serial clean --parallel copy js css templates",
